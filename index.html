@@ -14,15 +14,15 @@
         </a>
 
         <nav class="navbar">
-            <a href="#" class="active">Portfolio</a>
-            <a href="#" class="link">Experience</a>
+            <a href="#portfolio" class="active">Portfolio</a>
+            <a href="#about_me" class="link">About me</a>
             <a href="#" class="link">Skills</a>
             <a href="#" class="link">Projects </a>
             <a href="#" class="link">Education</a>
         </nav>
-        <a href="#" class="contact">Contact Me</a>
+        <a href="#contact_me" class="contact" >Contact Me</a>
     </header>
-    <section class="home">
+    <section id="portfolio" class="home">
         <div class="home-content">
             <h3>Hi</h3>
             <h1>I'm<span> Koketso<br></span>a Software Developer
@@ -46,7 +46,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section id="about_me" class="about">
         <div class="about-img">
             <img src="portfolio.jpg" alt="">
         </div>
@@ -65,22 +65,67 @@
             <a href="#" class="btn-2">Experience</a>
         </div>
     </section>
-
-    <section class="contact-form">
-        <h2 class="contact-me">Contact <span>Me</span></h2>
-        <form  action="#">
-            <div class="input-box">
-                <input type="text" placeholder="FullName">
-                <input type="email" placeholder="Email">
+    <section class="skills">
+        <h2 class="skills-heading"> My Skills</h2>
+        <div class="mytabs">
+            <input type="radio" id="tabfree" name="mytabs" checked="checked">
+            <label for="tabfree">Languages/Framework</label>
+            <div class="tab">
+            <img class="images" src="images/python.png">
+            <img class="images"  src="images/java.png">
+            <img class="images"  src="images/flutter.png">
             </div>
-            <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Subject">
+            <div class="mytabs">
+                <div class="tab">
+                <img class="images"  src="images/dart.png">
+                <img class="images"  src="images/flask.png">
+                <img class="images"  src="images/reactjs.png">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message">
-            </textarea>
-            <input type="submit" value="Sent Message" class="btn-1">
-        </form>
-    </section>
-</body>
-</html>
+            <div class="mytabs">
+                <div class="tab">
+                <img class="images"  src="images/jsc.png">
+                <img class="images"  src="images/html.png">
+                <img class="images"  src="images/css.png">
+            </div>
+        </div>
+            <div>
+                <input type="radio" id="tabgold" name="mytabs">
+                <label for="tabgold"> Database</label>
+                <div class="tab">
+                    <img class="images" src="images/sql.png">
+                    <img class="images"  src="images/netlify.png">
+                    <img class="images"  src="images/firebase.png">
+                </div>
+                <input type="radio" id="tabsilver" name="mytabs" >
+                <label for="tabsilver">Soft Skills</label>
+                <div class="tab">
+                    <img class="images" src="images/teamwork.png">
+                    <img class="images"  src="images/reliable.png">
+                    <img class="images"  src="images/probsol.png">
+                    </div>
+                    <div class="mytabs">
+                    <div class="tab">
+                    <img class="images"  src="images/com.png">
+                    <img class="images"  src="images/adapt.png">
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="contact_me" class="contact-form">
+            <h2 class="contact-me"><span>Contact</span> Me</h2>
+            <form  action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="FullName">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message">
+                </textarea>
+                <input type="submit" value="Sent Message" class="btn-1">
+            </form>
+        </section>
+    </body>
+    </html>
