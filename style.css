@@ -244,6 +244,7 @@ span{
   background-color:rgb(238, 66, 123);
   overflow: hidden;
 }
+
 .skills header{
   text-align: center;
   margin-top: 1em;
@@ -346,7 +347,138 @@ section .content{
 section .gallery{
   width: 200px;
   display: inline-block;
-  border: 1px solid;
+  border: 1px solid grey;
   padding: 20px 20px 20px 30px;
   margin: 20px;
+  box-shadow: 0 0 25px  rgb(34, 17, 23);
+}
+
+section .gallery .description{
+  font-weight: 600;
+}
+
+.Edu_exp{
+  background-color: black;
+  width:100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Edu_exp header{
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.container{
+  width: 100%;
+  padding: 35px 10%;
+}
+
+main.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.col header.title{
+  font-family:helvetica;
+  color:rgb(238, 66, 123);
+  padding: 0px 0px 20px 30px;
+}
+
+.col .contents{
+  padding: 0px 30px;
+  border-left: 2px solid rgb(238, 66, 123);
+}
+.col .contents .box{
+  position: relative;
+  padding: 20px;
+  border: 1px solid rgb(253, 253, 253);
+  background-color: rgb(238, 66, 123);
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-bottom: 20px;
+}
+
+.col .contents .box:hover{
+  box-shadow: 0px 5px 15px 0px rgb(238, 66, 123);
+  border: 1px solid transparent;
+}
+
+.col .contents .box::before{
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  right: calc(100% + 22px);
+  top: 0;
+  background-color: rgb(238, 66, 123);
+  border: 2px solid white;
+}
+
+.box h4{
+  position: relative;
+  color:white ;
+}
+
+.box h3{
+  font-size: 19px;
+  padding:10px 0px 6px;
+  font-family: helvetica;
+  color: #0a0a0a;
+}
+
+.box h2{
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: rgb(39, 32, 32);
+}
+
+.box p{
+  line-height: 1.2;
+  color:white ;
+  font-size: 17px;
+}
+
+
+.socials{
+  background-color: rgb(184, 178, 178);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25vh;
+}
+
+.socials_gallary{
+  width: 110px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 200px;
+  padding: 20px 20px 20px 25px;
+  margin: 20px;
+  box-shadow: 0 0 25px  rgb(34, 17, 23);
+}
+
+.socials_gallary:hover{
+  background-color: rgb(255, 255, 255);
+}
+
+.socials_gallary .descriptions{
+  text-align: center;
+  font-weight: 600;
+  color: black;
+}
+
+.socials_gallary .descriptions:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  
 }
