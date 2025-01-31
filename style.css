@@ -558,3 +558,45 @@ section .projects-container p{
   color: aliceblue;
 }
 
+@media(max-width:800px){
+  .input-box{
+    width: 80vw;
+  }
+}
+
+@media (max-width: 765px) {
+  .header {
+    flex-wrap: wrap; 
+    padding: 10px 5%; 
+  }
+
+  .navbar {
+    flex-direction: column; 
+    align-items: first baseline;
+    gap: 10px; 
+    width: 20%;
+  }
+
+  .contact {
+    margin-top: 10px; 
+    width: 100%; 
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .navbar {
+    gap: 8px; 
+  }
+
+  .contact {
+    font-size: 14px; 
+    padding: 8px 20px; 
+  }
+}
+
+
