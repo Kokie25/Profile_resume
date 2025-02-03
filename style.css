@@ -286,7 +286,7 @@ span{
   height: 100%;
   width: 100%;
   text-align: center;
-  line-height: 50px;
+  line-height: 30px;
   cursor: pointer;
   color: rgb(5, 5, 5);
   font-size: 17px;
@@ -1041,6 +1041,11 @@ main.row{
   font-style: italic;
   font-weight: 600;
   padding: 10px;
+}
+
+.gallery img{
+
+  width: 50%;
 }
 
 
