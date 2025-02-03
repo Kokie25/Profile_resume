@@ -1,7 +1,8 @@
 
 
-var endpoint = 'http://ip-api.com/json/?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone';
-
+var endpoint = 'http://ip-api.com/json/?fields=status,message,country,city,lat,lon';
+var longitude;
+var latitude;
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
@@ -13,8 +14,7 @@ xhr.onreadystatechange = function() {
 
         latitude = response.lat;
         longitude =response.lon;
-        console.log(latitude + " " + longitude)
-        document.getElementById("location").innerHTML= response.country +"," + response.timezone;
+        document.getElementById("location").innerHTML= "Location: " + response.country +"," + response.city;
 
         var api = "d7b1b7de72fb72f5c24cc76672c33897"
         var weatherendpoint = "https://api.openweathermap.org/data/2.5/weather?"
@@ -25,8 +25,8 @@ xhr.onreadystatechange = function() {
                 return WeatherData.json()
             })
             .then(WeatherData => {
-            document.getElementById("weather").innerHTML = "Weather ("+ WeatherData.weather[0].description + "," + "Temp = " + (WeatherData.main.temp - 273.15.toFixed(0)) + " ℃" + ")" ;
-            console.log(WeatherData);
+            document.getElementById("weather").innerHTML = "Weather ("+ WeatherData.weather[0].description + ", " + 
+            (WeatherData.main.temp - 273.15).toFixed(2) +" ℃" + ")" ;
             })
             .catch(err => {
             console.error(err);

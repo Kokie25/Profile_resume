@@ -105,11 +105,11 @@ span{
   margin: 25px 0 30px;
 }
 
-.home-content .loc{
+.loc{
   font-size: 15px;
   font-style: italic;
   font-weight: 600;
-  margin-bottom: 15px;
+  padding: 10px;
 }
 
 .btn-box{
@@ -153,21 +153,6 @@ span{
 .btn-2:hover{
   background-color: white;
   color: rgb(238, 66, 123);
-}
-
-.popup {
-  display: none;
-  position: fixed;
-  padding: 10px;
-  width: 280px;
-  left: 50%;
-  margin-left: -150px;
-  height: 40%;
-  top: 50%;
-  margin-top: -100px;
-  background: #FFF;
-  border: 3px solid #F04A49;
-  z-index: 20;
 }
 
 
@@ -382,7 +367,7 @@ section .gallery .description{
 .Edu_exp{
   background-color: black;
   width:100%;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -580,35 +565,40 @@ section .projects-container p{
   color: aliceblue;
 }
 
-
-
-@media(max-width:800px){
-  .input-box{
-    width: 80vw;
-  }
+.api{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
 }
 
-@media (max-width: 765px) {
-  .header {
-    flex-wrap: wrap; 
-    padding: 10px 5%; 
+
+
+
+@media (max-width: 800px) {
+  .input-box{
+    width: 60vh;
   }
 
+  .header {
+    flex-wrap: wrap; 
+    padding: 5px 10%; 
+  }
+  
   .navbar {
     flex-direction: column; 
-    align-items: first baseline;
     gap: 10px; 
     width: 20%;
   }
-
+  
   .contact {
     margin-top: 10px; 
     width: 100%; 
     text-align: center;
+    font-size: 14px; 
+    padding: 8px 20px; 
   }
-}
-
-@media (max-width: 480px) {
   .logo {
     font-size: 20px;
   }
@@ -617,10 +607,443 @@ section .projects-container p{
     gap: 8px; 
   }
 
-  .contact {
-    font-size: 14px; 
-    padding: 8px 20px; 
+  .home{
+    width:100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 12% 0;
   }
+  
+  
+
+  .home-content h1{
+    font-size: 20px;
+  }
+
+  
+
+  .home-content p{
+    font-size: 15px;
+  }
+
+  .img-box{
+   display: none;
+  }
+
+  .about{
+    display: flex;
+    justify-content: center;
+    align-self:center;
+    padding: 6% 4%;
+    gap:5em;
+    background: black;
+    height: 600px;
+  }
+
+  .about-img img{
+    position:absolute;
+    width: 200px;
+    box-shadow: 0 0 25px rgb(238, 66, 123),
+                0 0 50px rgb(238, 66, 123);
+    border-radius: 50%;
+  }
+  
+  .about-content h2{
+    text-align: right;
+    color: white;
+    font-size: 30px;
+  }
+  
+  .about-content h3{
+    font-size: 45px;
+    text-align: right;
+    color: white;
+  }
+  
+  .about-content p{
+    color: white;
+    font-size: 15px;
+    margin: 10em 0 3em;
+  }
+
+  .btn-box{
+    width: 200px;
+    display: flex;
+    gap:2em;
+  }
+  
+  .btn-1{
+    padding:10px 20px;
+    background-color: black;
+    color:white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn-1:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+  
+  .btn-2{
+    padding:10px 20px;
+    background-color:  rgb(238, 66, 123);
+    color:white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn-2:hover{
+    background-color: white;
+    color: rgb(238, 66, 123);
+  }
+  
+ 
+  
+  .skills header{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .spans{
+    color: aliceblue;
+  }
+  
+  .wrapper{
+    max-width: 500px;
+    width: 80%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px 25px 25px 25px;
+    border-radius: 5px;
+  }
+  .wrapper nav{
+    position:relative;
+    height: 40px;
+    width: 60%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  
+  }
+  
+  .wrapper nav label{
+    display: block;
+    height: 50%;
+    width: 80%;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    color: rgb(5, 5, 5);
+    font-size: 15px;
+    text-decoration: underline;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+  
+  }
+
+  .wrapper nav .slider{
+  height: 100%;
+  width: 50%;
+  background:none;
+  z-index:0;
+  
+  transition: all 0.3s ease;
+}
+
+
+
+#languages:checked ~ nav label.lang,
+#frame:checked ~ nav label.frame,
+#data:checked ~ nav label.data,
+#datab:checked ~ nav label.dataB,
+#softs:checked ~ nav label.softS{
+  color: black;
+    
+}
+
+#languages:checked ~ nav label.lang,
+#frame:checked ~ nav label.frame,
+#data:checked ~ nav label.data,
+#datab:checked ~ nav label.dataB,
+#softs:checked ~ nav label.softS:hover{
+  color: grey;
+}
+
+
+
+
+section .gallery{
+  width: 100px;
+  display: inline-block;
+  border: 1px solid grey;
+  padding: 10px 10px 10px 20px;
+  margin: 10px;
+  box-shadow: 0 0 25px  rgb(34, 17, 23);
+}
+
+section .gallery .description{
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.projects{
+  background-color: white;
+  box-sizing: border-box;
+  height:140vh ;
+  
+
+}
+
+.projects-container{
+  width: 60vmin;
+  transform: translate(65%,5%);
+  overflow: hidden;
+  border: 2px solid rgb(221, 213, 213);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(238, 66, 123,0.6);
+  
+}
+
+
+.projects-wrapper{
+  width: 100%;
+  display: flex;
+  animation: slide 16s infinite;
+  
+}
+
+
+
+@keyframes slide{
+  0%{
+    transform: translate(0);
+  }
+  25%{
+    transform: translate(0);
+  }
+  30%{
+    transform: translate(-100%);
+  }
+  50%{
+    transform: translate(-100%);
+  }
+  55%{
+    transform: translate(-200%);
+  }
+  75%{
+    transform: translate(-200%);
+  }
+  80%{
+    transform: translate(-300%);
+  }
+  100%{
+    transform: translate(-300%);
+  }
+}
+
+.projects-img{
+  width: 100%;
+}
+
+.projects-container{
+  width: 60vmin;
+  transform: translate(30%,5%);
+  overflow: hidden;
+  border: 2px solid rgb(221, 213, 213);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(238, 66, 123,0.6);
+  
+}
+
+.projects header{
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.Edu_exp{
+  background-color: black;
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Edu_exp header{
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.container{
+  width: 100%;
+  padding: 20px 5%;
+}
+
+main.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+.col header.title{
+  font-family:helvetica;
+  color:rgb(238, 66, 123);
+  padding: 0px 0px 10px 20px;
+}
+
+.col .contents{
+  padding: 0px 10px;
+  border-left: 2px solid rgb(238, 66, 123);
+}
+.col .contents .box{
+  position: relative;
+  padding: 10px;
+  border: 1px solid rgb(253, 253, 253);
+  background-color: rgb(238, 66, 123);
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-bottom: 10px;
+}
+
+.col .contents .box:hover{
+  box-shadow: 0px 5px 15px 0px rgb(238, 66, 123);
+  border: 1px solid transparent;
+}
+
+.col .contents .box::before{
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  right: calc(100% + 5px);
+  top: 0;
+  background-color: rgb(238, 66, 123);
+  border: 2px solid white;
+}
+
+
+
+.box h3{
+  font-size: 15px;
+  padding:5px 0px 3px;
+  font-family: helvetica;
+  color: #0a0a0a;
+}
+
+.box h2{
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: rgb(39, 32, 32);
+}
+
+.box p{
+  line-height: 1.2;
+  color:white ;
+  font-size: 14px;
+}
+
+.contact-form h2{
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 30px;
+ }
+ 
+ .contact-form{
+   background-color: white;
+ }
+ 
+ .contact-form form{
+   max-width: 30em;
+   text-align: center;
+ }
+ 
+ .contact-form input-box{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ 
+ 
+ .contact-form form .input-box input,
+ .contact-form form textarea{
+   width: 80%;
+   padding:1em;
+   font-size: 12px;
+   color: black;
+   background-color:white;
+   border-radius: .8rem;
+   resize: none;
+ }
+
+
+ .socials{
+  background-color: rgb(184, 178, 178);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+}
+
+.socials_gallary{
+  width: 80px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 200px;
+  padding: 10px 10px 10px 10px;
+  margin: 10px;
+  box-shadow: 0 0 25px  rgb(34, 17, 23);
+}
+
+.socials_gallary:hover{
+  background-color: rgb(255, 255, 255);
+}
+
+.socials_gallary .descriptions{
+  text-align: center;
+  font-weight: 600;
+  color: black;
+  font-size: 10px;
+}
+
+.socials_gallary .descriptions:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  
+}
+
+.loc{
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+  padding: 10px;
+}
+
+
 }
 
 
