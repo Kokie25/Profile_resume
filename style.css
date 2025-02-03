@@ -105,6 +105,13 @@ span{
   margin: 25px 0 30px;
 }
 
+.home-content .loc{
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
 .btn-box{
   width: 345px;
   display: flex;
@@ -146,6 +153,21 @@ span{
 .btn-2:hover{
   background-color: white;
   color: rgb(238, 66, 123);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 280px;
+  left: 50%;
+  margin-left: -150px;
+  height: 40%;
+  top: 50%;
+  margin-top: -100px;
+  background: #FFF;
+  border: 3px solid #F04A49;
+  z-index: 20;
 }
 
 
@@ -557,6 +579,8 @@ section .projects-container p{
   background-color: #0a0a0a;
   color: aliceblue;
 }
+
+
 
 @media(max-width:800px){
   .input-box{
